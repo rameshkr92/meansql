@@ -38,19 +38,19 @@
   <!--{% for cssFile in cssFiles %}<link rel="stylesheet" href="{{cssFile}}">{% endfor %}-->
 </head>
 <body class="ng-cloak">
-<ng-include src="'/modules/core/client/views/partials/theme-selector.client.view.html'" class=""></ng-include>
+<div ng-include="'/modules/core/client/views/partials/theme-selector.client.view.html'" class=""></div>
 <div class="sb-site-container">
-  <ng-include src="'/modules/core/client/views/partials/header.client.view.html'" class=""></ng-include>
-  <ng-include src="'/modules/core/client/views/partials/nav.client.view.html'" class=""></ng-include>
-  <ng-include src="'/modules/core/client/views/partials/modal.client.view.html'" class=""></ng-include>
-  <ng-include src="'/modules/core/client/views/partials/banner.client.view.html'" class=""></ng-include>
+  <header ng-include="'/modules/core/client/views/partials/header.client.view.html'" class=""></header>
+  <div ng-include="'/modules/core/client/views/partials/nav.client.view.html'" class=""></div>
+  <div ng-include="'/modules/core/client/views/partials/modal.client.view.html'" class=""></div>
+  <div ng-include="'/modules/core/client/views/partials/banner.client.view.html'" class=""></div>
 
   {% block content %}{% endblock %}
 
-  <ng-include src="'/modules/core/client/views/partials/footer.client.view.html'" class=""></ng-include>
+  <div ng-include="'/modules/core/client/views/partials/footer.client.view.html'" class=""></div>
 </div>
 
-<ng-include src="'/modules/core/client/views/partials/slidebar.client.view.html'" class=""></ng-include>
+<div ng-include="'/modules/core/client/views/partials/slidebar.client.view.html'" class=""></div>
 
 <!--Embedding The User Object-->
 <script type="text/javascript">
@@ -61,6 +61,7 @@
 
 <!--Application JavaScript Files-->
 {% for jsFile in jsFiles %}<script type="text/javascript" src="{{jsFile}}"></script>{% endfor %}
+
 <script src="/front/js/plugins.min.js"></script>
 <script src="/front/js/app.min.js"></script>
 <script src="/front/js/configurator.min.js"></script>

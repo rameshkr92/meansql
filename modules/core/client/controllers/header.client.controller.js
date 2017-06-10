@@ -6,6 +6,7 @@ angular.module('core').controller('HeaderController', ['$scope', '$state', 'Auth
     $scope.$state = $state;
     $scope.authentication = Authentication;
 
+    //hide banner file for inner pages
     // Get the topbar menu
     $scope.menu = Menus.getMenu('topbar');
 
@@ -20,4 +21,7 @@ angular.module('core').controller('HeaderController', ['$scope', '$state', 'Auth
       $scope.isCollapsed = false;
     });
   }
-]);
+])
+    .run(['$state', function($state) {
+        $state.transitionTo('test.subs');
+    }]);
